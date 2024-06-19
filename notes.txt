@@ -1,0 +1,22 @@
+python -m venv myenv
+myenv\Scripts\activate
+pip install django
+django-admin startproject myproject
+python manage.py startapp any-app
+
+
+
+
+
+////////////////////////////////////////////////////////////////
+Session framework configuration----------------------------------------------------------------
+
+django store sessions in database
+and its totally cookie based
+
+two types of sessions are created
+1 file based 
+2 cookie based
+3 django based sessions
+4 cache based sessions
+5 always migrate sessions in db

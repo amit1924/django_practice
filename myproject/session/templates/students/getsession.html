@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Session</title>
+</head>
+<body>
+    {% comment %} <h1>Get Session</h1>
+    <h2>Name:{{name}}</h2>
+    <h2>Value:{{value}}</h2>
+    <h2>Session age:{{request.session.get_session_cookie_age}} seocnds</h2>
+    <h2>Session Expiry:{{request.session.get_expiry_age}} </h2>
+    <h2>Expiry date:{{request.session.get_expiry_date}} </h2>
+    <h2>{{request.session.get_expire_at_browser_close}} </h2>
+   
+    <hr>
+    <br/>
+    <br/> {% endcomment %}
+
+
+    {% comment %} for getting keys of session,but this is not recommended {% endcomment %}
+    {% comment %}
+     {% for key in request.session.keys %}
+    {key:{{key}}}
+    {% endfor %} {% endcomment %}
+
+
+
+
+    {% comment %} First Method {% endcomment %}
+    {% comment %} {% for key in keys %}
+    {{key}}<br/><br/>
+    {% endfor %}
+    <hr>
+    {% for key,value in items %}
+    {{key}}:{{value}}
+    {% endfor %}<br/><br/> {% endcomment %}
+
+
+    {% comment %}  To Check Browser support cookies or not{% endcomment %}
+
+
+    {% comment %} Check Browser Support Cookie or not {% endcomment %}
+{% comment %} <h1>Check Test Cookie..</h1>
+
+    {{request.session.test_cookie_worked}} {% endcomment %}
+
+
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+{% comment %}  {% endcomment %}
+    {% comment %} Get Session Settings {% endcomment %}
+
+    {% comment %} We will write something in settings.py {% endcomment %}
+
+    <h1>Get Sesssion Settings</h1>
+    
+    <h2>Name:{{name}}</h2>
+    <h2>Value:{{value}}</h2>
+    <h2>Session age:{{request.session.get_session_cookie_age}} seocnds</h2>
+    <h2>Session Expiry:{{request.session.get_expiry_age}} </h2>
+    <h2>Expiry date:{{request.session.get_expiry_date}} </h2>
+    <h2>{{request.session.get_expire_at_browser_close}} </h2>
+
+
+
+</body>
+</html>
